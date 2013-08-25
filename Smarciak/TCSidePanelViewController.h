@@ -1,5 +1,5 @@
 //
-//  TCViewController.h
+//  TCSidePanelViewController.h
 //  Smarciak
 //
 //  Created by Tomek Cejner on 8/26/13.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <JASidePanelController.h>
+#import "JASidePanelController.h"
 
-@interface TCViewController : JASidePanelController
+@interface TCSidePanelViewController : UITableViewController
 
 @end
