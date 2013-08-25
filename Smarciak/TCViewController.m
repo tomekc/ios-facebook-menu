@@ -26,4 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) awakeFromNib
+{
+    [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"]];
+    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"centerViewController"]];
+
+}
+
 @end
