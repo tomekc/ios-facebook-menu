@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4098534117CAB6D7004C9CDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4098534017CAB6D7004C9CDD /* UIKit.framework */; };
+		4098534317CAB6D7004C9CDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4098534217CAB6D7004C9CDD /* Foundation.framework */; };
+		4098534517CAB6D7004C9CDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4098534417CAB6D7004C9CDD /* CoreGraphics.framework */; };
+		4098534B17CAB6D7004C9CDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4098534917CAB6D7004C9CDD /* InfoPlist.strings */; };
+		4098534D17CAB6D7004C9CDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098534C17CAB6D7004C9CDD /* main.m */; };
+		4098535117CAB6D7004C9CDD /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098535017CAB6D7004C9CDD /* TCAppDelegate.m */; };
+		4098535317CAB6D7004C9CDD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4098535217CAB6D7004C9CDD /* Default.png */; };
+		4098535517CAB6D7004C9CDD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4098535417CAB6D7004C9CDD /* Default@2x.png */; };
+		4098535717CAB6D7004C9CDD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4098535617CAB6D7004C9CDD /* Default-568h@2x.png */; };
+		4098535A17CAB6D7004C9CDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4098535817CAB6D7004C9CDD /* MainStoryboard.storyboard */; };
+		4098535D17CAB6D7004C9CDD /* TCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098535C17CAB6D7004C9CDD /* TCViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4098533D17CAB6D7004C9CDD /* Smarciak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smarciak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4098534017CAB6D7004C9CDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4098534217CAB6D7004C9CDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4098534417CAB6D7004C9CDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4098534817CAB6D7004C9CDD /* Smarciak-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Smarciak-Info.plist"; sourceTree = "<group>"; };
+		4098534A17CAB6D7004C9CDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4098534C17CAB6D7004C9CDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4098534E17CAB6D7004C9CDD /* Smarciak-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smarciak-Prefix.pch"; sourceTree = "<group>"; };
+		4098534F17CAB6D7004C9CDD /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
+		4098535017CAB6D7004C9CDD /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
+		4098535217CAB6D7004C9CDD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4098535417CAB6D7004C9CDD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4098535617CAB6D7004C9CDD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4098535917CAB6D7004C9CDD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4098535B17CAB6D7004C9CDD /* TCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewController.h; sourceTree = "<group>"; };
+		4098535C17CAB6D7004C9CDD /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4098533A17CAB6D7004C9CDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4098534117CAB6D7004C9CDD /* UIKit.framework in Frameworks */,
+				4098534317CAB6D7004C9CDD /* Foundation.framework in Frameworks */,
+				4098534517CAB6D7004C9CDD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4098533417CAB6D7004C9CDD = {
+			isa = PBXGroup;
+			children = (
+				4098534617CAB6D7004C9CDD /* Smarciak */,
+				4098533F17CAB6D7004C9CDD /* Frameworks */,
+				4098533E17CAB6D7004C9CDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4098533E17CAB6D7004C9CDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4098533D17CAB6D7004C9CDD /* Smarciak.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4098533F17CAB6D7004C9CDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4098534017CAB6D7004C9CDD /* UIKit.framework */,
+				4098534217CAB6D7004C9CDD /* Foundation.framework */,
+				4098534417CAB6D7004C9CDD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4098534617CAB6D7004C9CDD /* Smarciak */ = {
+			isa = PBXGroup;
+			children = (
+				4098534F17CAB6D7004C9CDD /* TCAppDelegate.h */,
+				4098535017CAB6D7004C9CDD /* TCAppDelegate.m */,
+				4098535817CAB6D7004C9CDD /* MainStoryboard.storyboard */,
+				4098535B17CAB6D7004C9CDD /* TCViewController.h */,
+				4098535C17CAB6D7004C9CDD /* TCViewController.m */,
+				4098534717CAB6D7004C9CDD /* Supporting Files */,
+			);
+			path = Smarciak;
+			sourceTree = "<group>";
+		};
+		4098534717CAB6D7004C9CDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4098534817CAB6D7004C9CDD /* Smarciak-Info.plist */,
+				4098534917CAB6D7004C9CDD /* InfoPlist.strings */,
+				4098534C17CAB6D7004C9CDD /* main.m */,
+				4098534E17CAB6D7004C9CDD /* Smarciak-Prefix.pch */,
+				4098535217CAB6D7004C9CDD /* Default.png */,
+				4098535417CAB6D7004C9CDD /* Default@2x.png */,
+				4098535617CAB6D7004C9CDD /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4098533C17CAB6D7004C9CDD /* Smarciak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4098536017CAB6D7004C9CDD /* Build configuration list for PBXNativeTarget "Smarciak" */;
+			buildPhases = (
+				4098533917CAB6D7004C9CDD /* Sources */,
+				4098533A17CAB6D7004C9CDD /* Frameworks */,
+				4098533B17CAB6D7004C9CDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Smarciak;
+			productName = Smarciak;
+			productReference = 4098533D17CAB6D7004C9CDD /* Smarciak.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4098533517CAB6D7004C9CDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Tomek Cejner";
+			};
+			buildConfigurationList = 4098533817CAB6D7004C9CDD /* Build configuration list for PBXProject "Smarciak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4098533417CAB6D7004C9CDD;
+			productRefGroup = 4098533E17CAB6D7004C9CDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4098533C17CAB6D7004C9CDD /* Smarciak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4098533B17CAB6D7004C9CDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4098534B17CAB6D7004C9CDD /* InfoPlist.strings in Resources */,
+				4098535317CAB6D7004C9CDD /* Default.png in Resources */,
+				4098535517CAB6D7004C9CDD /* Default@2x.png in Resources */,
+				4098535717CAB6D7004C9CDD /* Default-568h@2x.png in Resources */,
+				4098535A17CAB6D7004C9CDD /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4098533917CAB6D7004C9CDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4098534D17CAB6D7004C9CDD /* main.m in Sources */,
+				4098535117CAB6D7004C9CDD /* TCAppDelegate.m in Sources */,
+				4098535D17CAB6D7004C9CDD /* TCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4098534917CAB6D7004C9CDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4098534A17CAB6D7004C9CDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4098535817CAB6D7004C9CDD /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4098535917CAB6D7004C9CDD /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4098535E17CAB6D7004C9CDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4098535F17CAB6D7004C9CDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4098536117CAB6D7004C9CDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smarciak/Smarciak-Prefix.pch";
+				INFOPLIST_FILE = "Smarciak/Smarciak-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4098536217CAB6D7004C9CDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smarciak/Smarciak-Prefix.pch";
+				INFOPLIST_FILE = "Smarciak/Smarciak-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4098533817CAB6D7004C9CDD /* Build configuration list for PBXProject "Smarciak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4098535E17CAB6D7004C9CDD /* Debug */,
+				4098535F17CAB6D7004C9CDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4098536017CAB6D7004C9CDD /* Build configuration list for PBXNativeTarget "Smarciak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4098536117CAB6D7004C9CDD /* Debug */,
+				4098536217CAB6D7004C9CDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4098533517CAB6D7004C9CDD /* Project object */;
+}
