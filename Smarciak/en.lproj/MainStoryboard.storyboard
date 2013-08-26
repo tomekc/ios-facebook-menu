@@ -42,19 +42,48 @@
             </objects>
             <point key="canvasLocation" x="828" y="785"/>
         </scene>
-        <!--View Controller-->
+        <!--Left View Controller-->
         <scene sceneID="y82-Si-UOV">
             <objects>
-                <viewController storyboardIdentifier="leftViewController" id="jyL-Sy-e1g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leftViewController" id="jyL-Sy-e1g" customClass="TCLeftViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Y5-9q-PaP">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6PI-GD-hFQ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="d39-3i-ZBF">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jyL-Sy-e1g" id="GF0-BT-YcK"/>
+                                    <outlet property="delegate" destination="jyL-Sy-e1g" id="hA0-kb-08X"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6PI-GD-hFQ" firstAttribute="bottom" secondItem="0Y5-9q-PaP" secondAttribute="bottom" type="default" id="0bl-py-Rwr"/>
+                            <constraint firstItem="6PI-GD-hFQ" firstAttribute="top" secondItem="0Y5-9q-PaP" secondAttribute="top" type="default" id="LmF-Hv-hKU"/>
+                            <constraint firstItem="6PI-GD-hFQ" firstAttribute="leading" secondItem="0Y5-9q-PaP" secondAttribute="leading" type="default" id="ayU-7m-n6n"/>
+                            <constraint firstItem="6PI-GD-hFQ" firstAttribute="trailing" secondItem="0Y5-9q-PaP" secondAttribute="trailing" type="default" id="qcL-ib-v2T"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tview" destination="6PI-GD-hFQ" id="aNL-hx-CiK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T20-Cv-bgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="619" y="117"/>
+            <point key="canvasLocation" x="112" y="798"/>
         </scene>
     </scenes>
     <classes>
@@ -63,6 +92,12 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TCLeftViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TCLeftViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tview" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="TCViewController" superclassName="JASidePanelController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TCViewController.h"/>

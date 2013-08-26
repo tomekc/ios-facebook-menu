@@ -19,6 +19,7 @@
 		4098535A17CAB6D7004C9CDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4098535817CAB6D7004C9CDD /* MainStoryboard.storyboard */; };
 		4098535D17CAB6D7004C9CDD /* TCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098535C17CAB6D7004C9CDD /* TCViewController.m */; };
 		4098536517CAB886004C9CDD /* TCSidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098536417CAB886004C9CDD /* TCSidePanelViewController.m */; };
+		4098536817CB2381004C9CDD /* TCLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098536717CB2381004C9CDD /* TCLeftViewController.m */; };
 		FF2659E66582456DAC8F4D9A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A87A57BC83241738C15371E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		4098535C17CAB6D7004C9CDD /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
 		4098536317CAB886004C9CDD /* TCSidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSidePanelViewController.h; sourceTree = "<group>"; };
 		4098536417CAB886004C9CDD /* TCSidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSidePanelViewController.m; sourceTree = "<group>"; };
+		4098536617CB2381004C9CDD /* TCLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCLeftViewController.h; sourceTree = "<group>"; };
+		4098536717CB2381004C9CDD /* TCLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCLeftViewController.m; sourceTree = "<group>"; };
 		E8B1AE0D068C4DB9BE196CF8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -100,6 +103,8 @@
 				4098534717CAB6D7004C9CDD /* Supporting Files */,
 				4098536317CAB886004C9CDD /* TCSidePanelViewController.h */,
 				4098536417CAB886004C9CDD /* TCSidePanelViewController.m */,
+				4098536617CB2381004C9CDD /* TCLeftViewController.h */,
+				4098536717CB2381004C9CDD /* TCLeftViewController.m */,
 			);
 			path = Smarciak;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				4098535117CAB6D7004C9CDD /* TCAppDelegate.m in Sources */,
 				4098535D17CAB6D7004C9CDD /* TCViewController.m in Sources */,
 				4098536517CAB886004C9CDD /* TCSidePanelViewController.m in Sources */,
+				4098536817CB2381004C9CDD /* TCLeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
