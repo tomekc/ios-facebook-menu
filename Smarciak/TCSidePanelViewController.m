@@ -7,8 +7,15 @@
 //
 
 #import "TCSidePanelViewController.h"
+#import "NIStylesheetCache.h"
+#import "NIDOM.h"
 
 @interface TCSidePanelViewController ()
+{
+    NIStylesheetCache *stylesheetCache;
+    NIDOM *_dom;
+
+}
 
 @end
 
@@ -27,11 +34,22 @@
 {
     [super viewDidLoad];
 
+    stylesheetCache = [[NIStylesheetCache alloc] init];
+
+    NIStylesheet* stylesheet = [stylesheetCache stylesheetWithPath:@"style.css"];
+    NSLog(@"Stylesheet %@", stylesheet);
+    _dom = [[NIDOM alloc] initWithStylesheet:stylesheet];
+
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidUnload {
+    [_dom unregisterAllViews];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +78,9 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
+    [_dom registerView:cell withCSSClass:@"sidecell"];
+
     // Configure the cell...
     cell.textLabel.text = @"Aaa";
     

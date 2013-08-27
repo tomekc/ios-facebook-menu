@@ -6,11 +6,21 @@
 //  Copyright (c) 2013 Tomek Cejner. All rights reserved.
 //
 
+#import <Nimbus/NIDOM.h>
+#import <Nimbus/NIStylesheetCache.h>
+#import <JASidePanels/JASidePanelController.h>
+#import "UIViewController+JASidePanel.h"
 #import "TCLeftViewController.h"
+
+#import "NIStylesheet.h"
+#import "TCViewController.h"
 
 @interface TCLeftViewController ()
 {
     NSArray *options;
+    NIStylesheetCache *stylesheetCache;
+    NIDOM *_dom;
+
 }
 
 @end
@@ -31,12 +41,30 @@
     options = @[@"Activity", @"Candidates", @"Jobs", @"Reports"];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+//    stylesheetCache = [[NIStylesheetCache alloc] initWithPathPrefix:@"/"];
+
+//    NIStylesheet* stylesheet = [stylesheetCache stylesheetWithPath:@"style.css"];
+
+    NIStylesheet* stylesheet = [[NIStylesheet alloc] init];
+    [stylesheet loadFromPath:@"style.css"];
+
+
+
+    NSLog(@"Stylesheet %@", stylesheet);
+    _dom = [[NIDOM alloc] initWithStylesheet:stylesheet];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    [_dom refresh];
 }
 
 #pragma mark - Table view data source
@@ -59,10 +87,16 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
+    [_dom registerView:cell.contentView withCSSClass:@"sidecell"];
+    //[_dom registerView:cell.textLabel withCSSClass:@"sidecell"];
+
     // Configure the cell...
     cell.textLabel.text = [options objectAtIndex:indexPath.row];
-    
+
+    NSLog(@"%@", [_dom description]);
+    [_dom refresh];
+
     return cell;
 }
 
@@ -116,6 +150,26 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    //id peopleViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PeopleNavigationRoot"];
+
+
+
+    //NSLog(@"Klaska %@", self.sidePanelController.class);
+
+
+
+    //self.sidePanelController.centerPanel = peopleViewController;
+    TCViewController *mainvc = (TCViewController *) self.sidePanelController;
+
+    if (indexPath.row == 0) {
+        [mainvc showActivity];
+    }
+
+    if (indexPath.row == 1) {
+        [mainvc showPeople];
+    }
+
+
 }
 
 

@@ -12,7 +12,10 @@
 
 @end
 
-@implementation TCViewController
+@implementation TCViewController {
+    UIViewController *activityPanel;
+    UIViewController *peoplePanel;
+}
 
 - (void)viewDidLoad
 {
@@ -28,9 +31,21 @@
 
 -(void) awakeFromNib
 {
+    activityPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"navigationCtrl"];
+    peoplePanel  = [self.storyboard instantiateViewControllerWithIdentifier:@"PeopleNavigationRoot"];
+    
     [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"]];
-    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"navigationCtrl"]];
+    [self showActivity];
 
 }
+
+- (void)showActivity {
+    [self setCenterPanel:activityPanel];
+}
+
+- (void)showPeople {
+    [self setCenterPanel:peoplePanel];
+}
+
 
 @end

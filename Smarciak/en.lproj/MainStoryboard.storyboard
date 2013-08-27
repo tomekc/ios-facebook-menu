@@ -16,33 +16,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="135"/>
-        </scene>
-        <!--Table View Controller - Root View Controller-->
-        <scene sceneID="3nz-ya-WuQ">
-            <objects>
-                <tableViewController id="uTV-M8-I0c" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4yr-zS-Cfe">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aNR-ku-bV9">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="s3r-sF-eNv"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D7E-Fk-gD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="871" y="856"/>
+            <point key="canvasLocation" x="-1328" y="-33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pHe-oq-Zk9">
@@ -57,12 +31,63 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vu2-17-a3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="828"/>
+            <point key="canvasLocation" x="-63" y="832"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="vYH-eG-yQC">
+            <objects>
+                <navigationController storyboardIdentifier="PeopleNavigationRoot" definesPresentationContext="YES" id="w5h-1x-Xaf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IFs-UA-8nB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j3f-fe-0tk" kind="relationship" relationship="rootViewController" id="p9f-HW-7NA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTa-KF-NEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56" y="114"/>
+        </scene>
+        <!--People View Controller-->
+        <scene sceneID="ZDe-oN-56x">
+            <objects>
+                <viewController storyboardIdentifier="peopleView" id="j3f-fe-0tk" customClass="TCPeopleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gLc-a5-3g9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="People" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DP-Ll-NYi">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fua-L3-KaG">
+                                <segments>
+                                    <segment title="New"/>
+                                    <segment title="Interview"/>
+                                    <segment title="Rejected"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fua-L3-KaG" firstAttribute="top" secondItem="6DP-Ll-NYi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="EgD-hS-e1D"/>
+                            <constraint firstItem="6DP-Ll-NYi" firstAttribute="leading" secondItem="gLc-a5-3g9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Mwf-Pz-Lhm"/>
+                            <constraint firstAttribute="trailing" secondItem="Fua-L3-KaG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="XzW-tA-abc"/>
+                            <constraint firstItem="6DP-Ll-NYi" firstAttribute="top" secondItem="gLc-a5-3g9" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ihU-IE-YRS"/>
+                            <constraint firstItem="Fua-L3-KaG" firstAttribute="leading" secondItem="gLc-a5-3g9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lnG-Uy-TGw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BU8-2N-RSG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4t-XY-e5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="114"/>
+        </scene>
+        <!--Activity View Controller-->
         <scene sceneID="Ken-Fg-QgE">
             <objects>
-                <viewController storyboardIdentifier="centerViewController" id="aEt-Nx-ZLt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="centerViewController" id="aEt-Nx-ZLt" customClass="TCActivityViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cLf-Rn-obR">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ved-6H-tvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-72" y="790"/>
+            <point key="canvasLocation" x="488" y="838"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="y82-Si-UOV">
@@ -95,6 +120,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6PI-GD-hFQ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="326" id="VjE-9J-m1d"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="d39-3i-ZBF">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -104,6 +132,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.76565572976882945" green="0.90923654228265238" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -114,7 +143,6 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6PI-GD-hFQ" firstAttribute="bottom" secondItem="0Y5-9q-PaP" secondAttribute="bottom" type="default" id="0bl-py-Rwr"/>
                             <constraint firstItem="6PI-GD-hFQ" firstAttribute="top" secondItem="0Y5-9q-PaP" secondAttribute="top" type="default" id="LmF-Hv-hKU"/>
                             <constraint firstItem="6PI-GD-hFQ" firstAttribute="leading" secondItem="0Y5-9q-PaP" secondAttribute="leading" type="default" id="ayU-7m-n6n"/>
                             <constraint firstItem="6PI-GD-hFQ" firstAttribute="trailing" secondItem="0Y5-9q-PaP" secondAttribute="trailing" type="default" id="qcL-ib-v2T"/>
@@ -126,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T20-Cv-bgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80" y="127"/>
+            <point key="canvasLocation" x="-584" y="471"/>
         </scene>
     </scenes>
     <classes>
@@ -136,11 +164,17 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="TCActivityViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TCActivityViewController.h"/>
+        </class>
         <class className="TCLeftViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TCLeftViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="tview" candidateClass="UITableView"/>
             </relationships>
+        </class>
+        <class className="TCPeopleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TCPeopleViewController.h"/>
         </class>
         <class className="TCViewController" superclassName="JASidePanelController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TCViewController.h"/>

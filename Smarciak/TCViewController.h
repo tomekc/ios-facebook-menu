@@ -11,4 +11,7 @@
 
 @interface TCViewController : JASidePanelController
 
+- (void)showActivity;
+
+- (void)showPeople;
 @end
