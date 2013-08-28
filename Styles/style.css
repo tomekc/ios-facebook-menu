@@ -1,4 +1,15 @@
+
 .sidecell {
     background-color: #666666;
     color: white;
+    /*border-width: 1px;*/
+    /*border-color: #555;*/
+}
+
+.sidecellSelection {
+    background-color: #333;
+}
+
+.sidecellText {
+    color: #ccc;
 }

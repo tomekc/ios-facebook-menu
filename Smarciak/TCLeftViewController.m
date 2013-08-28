@@ -14,6 +14,7 @@
 
 #import "NIStylesheet.h"
 #import "TCViewController.h"
+#import "NIPaths.h"
 
 @interface TCLeftViewController ()
 {
@@ -38,7 +39,7 @@
 
 - (void)viewDidLoad
 {
-    options = @[@"Activity", @"Candidates", @"Jobs", @"Reports"];
+    options = @[@"Activity", @"Candidates", @"Jobs", @"Reports", @"Settings"];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
@@ -47,8 +48,11 @@
 //    NIStylesheet* stylesheet = [stylesheetCache stylesheetWithPath:@"style.css"];
 
     NIStylesheet* stylesheet = [[NIStylesheet alloc] init];
-    [stylesheet loadFromPath:@"style.css"];
+    [stylesheet loadFromPath:@"style.css" pathPrefix:NIPathForBundleResource([NSBundle mainBundle], @"/")];
 
+    NSLog(@"rule %@", [stylesheet rulesetForClassName:@".sidecell"]);
+
+    //[_dom registerView:_tview withCSSClass:@"sidecell"];
 
 
     NSLog(@"Stylesheet %@", stylesheet);
@@ -88,13 +92,16 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    [_dom registerView:cell.contentView withCSSClass:@"sidecell"];
-    //[_dom registerView:cell.textLabel withCSSClass:@"sidecell"];
+    [_dom registerView:cell withCSSClass:@"sidecell"];
+    [_dom registerView:cell.textLabel withCSSClass:@"sidecellText"];
+    [_dom registerView:cell.selectedBackgroundView withCSSClass:@"sidecellSelection"];
 
     // Configure the cell...
     cell.textLabel.text = [options objectAtIndex:indexPath.row];
 
-    NSLog(@"%@", [_dom description]);
+    NSLog(@"registered to cell %@", cell.textLabel.text);
+
+//    NSLog(@"%@", [_dom description]);
     [_dom refresh];
 
     return cell;
