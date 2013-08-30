@@ -54,6 +54,21 @@
 
     //[_dom registerView:_tview withCSSClass:@"sidecell"];
 
+    [self.tview setSeparatorColor:[UIColor colorWithRed:49.0/255.0
+                                                      green:54.0/255.0
+                                                       blue:57.0/255.0
+                                                      alpha:1.0]];
+    [self.tview setBackgroundColor:[UIColor colorWithRed:77.0/255.0
+                                                       green:79.0/255.0
+                                                        blue:80.0/255.0
+                                                       alpha:1.0]];
+
+    [self.view setBackgroundColor:[UIColor colorWithRed:66.0/255.0
+                                                  green:69.0/255.0
+                                                   blue:71.0/255.0
+                                                  alpha:1.0]];
+
+
 
     NSLog(@"Stylesheet %@", stylesheet);
     _dom = [[NIDOM alloc] initWithStylesheet:stylesheet];
@@ -92,17 +107,33 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    [_dom registerView:cell withCSSClass:@"sidecell"];
-    [_dom registerView:cell.textLabel withCSSClass:@"sidecellText"];
-    [_dom registerView:cell.selectedBackgroundView withCSSClass:@"sidecellSelection"];
+//    [_dom registerView:cell withCSSClass:@"sidecell"];
+//    [_dom registerView:cell.textLabel withCSSClass:@"sidecellText"];
 
     // Configure the cell...
     cell.textLabel.text = [options objectAtIndex:indexPath.row];
 
-    NSLog(@"registered to cell %@", cell.textLabel.text);
+//    NSLog(@"registered to cell %@", cell.textLabel.text);
 
 //    NSLog(@"%@", [_dom description]);
-    [_dom refresh];
+//    [_dom refresh];
+
+    [cell.backgroundView setBackgroundColor:[UIColor colorWithRed:77.0/255.0
+                                                       green:79.0/255.0
+                                                        blue:80.0/255.0
+                                                       alpha:1.0]];
+
+    [cell.textLabel setBackgroundColor:[UIColor clearColor]];
+    [cell.textLabel setTextColor:[UIColor
+            colorWithRed:230.0/255.0
+                   green:236.0/255.0
+                    blue:242.0/255.0
+                   alpha:1.0]];
+    [cell.textLabel setShadowColor:[[UIColor blackColor] colorWithAlphaComponent:.5]];
+    [cell.textLabel setShadowOffset:CGSizeMake(0, 1)];
+    [cell.textLabel setFont:[UIFont boldSystemFontOfSize:16.0]];
+
+
 
     return cell;
 }
@@ -175,6 +206,9 @@
     if (indexPath.row == 1) {
         [mainvc showPeople];
     }
+
+    [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 
 }
