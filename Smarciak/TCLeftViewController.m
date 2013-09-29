@@ -58,6 +58,7 @@
                                                       green:54.0/255.0
                                                        blue:57.0/255.0
                                                       alpha:1.0]];
+/*
     [self.tview setBackgroundColor:[UIColor colorWithRed:77.0/255.0
                                                        green:79.0/255.0
                                                         blue:80.0/255.0
@@ -67,7 +68,7 @@
                                                   green:69.0/255.0
                                                    blue:71.0/255.0
                                                   alpha:1.0]];
-
+*/
 
 
     NSLog(@"Stylesheet %@", stylesheet);
