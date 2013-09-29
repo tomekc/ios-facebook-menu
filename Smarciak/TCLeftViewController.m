@@ -124,6 +124,7 @@
                                                         blue:80.0/255.0
                                                        alpha:1.0]];
 
+    /*
     [cell.textLabel setBackgroundColor:[UIColor clearColor]];
     [cell.textLabel setTextColor:[UIColor
             colorWithRed:230.0/255.0
@@ -133,6 +134,10 @@
     [cell.textLabel setShadowColor:[[UIColor blackColor] colorWithAlphaComponent:.5]];
     [cell.textLabel setShadowOffset:CGSizeMake(0, 1)];
     [cell.textLabel setFont:[UIFont boldSystemFontOfSize:16.0]];
+    */
+
+    [cell.textLabel setFont:[UIFont systemFontOfSize:15.0]];
+    [cell.textLabel setTextColor:[UIColor colorWithWhite:(0xD0/256.0) alpha:1.0]];
 
 
 
